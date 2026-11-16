@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101b32"><meta name="description" content="Corrector local de partes informativos policiales">
+<link rel="manifest" href="./manifest.webmanifest"><link rel="icon" href="./icon-192.png"><link rel="apple-touch-icon" href="./icon-192.png">
+<link rel="stylesheet" href="./styles.css"><title>Mis Partes Policiales</title>
+</head>
+<body><main class="shell">
+<header class="top"><img src="./icon-192.png" alt="" class="app-icon"><div><p class="eyebrow">HERRAMIENTA PERSONAL</p><h1>Mis Partes Policiales</h1><p class="sub">Formato y corrección básica sin IA externa</p></div></header>
+<section class="panel">
+<label for="original">PEGÁ EL PARTE ORIGINAL</label><textarea id="original" maxlength="25000" placeholder="Pegá acá el texto tal como lo recibiste por WhatsApp..."></textarea>
+<div class="meta"><span id="counter">0 / 25.000</span><button id="clear" class="link" type="button">Borrar texto</button></div>
+<button id="format" class="primary" type="button">✦ APLICAR FORMATO</button>
+<p id="status" class="status" role="status" aria-live="polite">El procesamiento se realiza en este dispositivo, sin enviar el parte a servicios de IA.</p>
+</section>
+<section class="panel result-panel"><div class="result-head"><label for="result">PARTE LISTO PARA WHATSAPP</label><span id="resultState" class="tag">SIN RESULTADO</span></div>
+<textarea id="result" readonly placeholder="Acá aparecerá el parte ordenado..."></textarea>
+<button id="copy" class="secondary" type="button" disabled>▣ COPIAR PARA WHATSAPP</button></section>
+<aside class="notice"><strong>Alcance:</strong> esta versión no usa IA ni corrector gramatical avanzado. Aplica formato y correcciones automáticas limitadas. Revisá siempre el resultado; no cambia ni completa datos del procedimiento.</aside>
+<footer>Procesamiento local · Sin historial · Sin clave API</footer>
+</main><script src="./app.js" defer></script><script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}</script></body></html>
